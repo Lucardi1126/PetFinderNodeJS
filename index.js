@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = require('./routes');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 //app de express
 
@@ -18,6 +19,9 @@ app.set('view engine','pug');
 
 app.set('views', path.join(__dirname,'./views'));
 
+// Body parser para leer datos del formulario 
+
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.use('/', routes());
 

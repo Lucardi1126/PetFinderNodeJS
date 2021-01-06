@@ -2,19 +2,19 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport",  content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="app.css")
-        title Document
+        title= nombrePagina
     body
       
       header.barra
-        h1 PetFinder -Buscador de mascostas
-        a(href="#") Encontrar ahora.
+        h1 PetFinder -Buscador de mascotas
+        a(href="#") Encontrar
         
       main.contenedor 
         aside.contenedor-proyectos
           .panel.crear-proyecto
-            a.boton(href="#") Find Your Pet
+            a.boton(href="/buscar-mascota" class="boton") Encontrar
               spna   
           .panel
           .panel.crear-proyecto
@@ -27,6 +27,7 @@ html(lang="en")
                  a(href="#") Support
               li
                  a(href="") Hola Mundo 
+        block contenido
 
         
         
@@ -39,7 +40,8 @@ html(lang="en")
       
 
                             
-block contenido 
+
+ 
             
 
       

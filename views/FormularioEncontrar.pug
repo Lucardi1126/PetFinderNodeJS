@@ -1,0 +1,39 @@
+extends masterpage
+
+block contenido
+  
+
+  .contenido-principal
+        h1 #{nombrePagina}
+        
+        if errores
+            each error in errores
+                .alerta= error.texto
+
+        form.buscar-mascota(action='/buscar-mascota' method='POST')
+            .campo
+                
+                p
+                 | Selecciona tu tipo de mascota:
+                 
+                 input(type='checkbox' name='perro')
+                 | Perro
+                 input(type='checkbox' name='gato')
+                 |  Gato
+                p
+                label(for="imagen") Subir imagen Mascota
+                input(type="file", name="imagen")
+                br
+                label(for="nombre") Nombre
+                input(type="text" id="nombre" name="nombre" placeholder="Nombre Mascota")
+                label(for="color") Color
+                input(type="text" id="color" name="color" placeholder="Color de Mascota")
+                label(for="tamaño") Tamaño
+                input(type="text" id="tamaño" name="tamaño" placeholder="Tamaño de Mascota")
+                label(for="caracteristicas") Caracteristicas Especiales
+                input(type="text" id="caracteristica" name="caracteristicas" placeholder="Caracteristicas")
+                label(for="zona-extravio") Zona de extravio
+                input(type="text" id="zona" name="zona" placeholder="Zona")
+            .campo.buscar
+               input(type="submit" value="Buscar" class="boton")
+
