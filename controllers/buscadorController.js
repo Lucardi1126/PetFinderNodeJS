@@ -13,7 +13,7 @@ exports.formularioEnviar = (req, res)=> {
     // acceder a lo que el usuario escribe
     //console.log(req.body);
 
-    // Validacion
+    // Validacion   
     const {nombre} = req.body;
 
     let errores = [];
@@ -24,7 +24,7 @@ exports.formularioEnviar = (req, res)=> {
 
     // Errores
     if(errores.length > 0){
-        res.render('FormularioEncontrar', {nombrePgina : 'Buscar',
+        res.render('FormularioEncontrar', {nombrePagina : 'Buscar',
     errores})
     }
 }

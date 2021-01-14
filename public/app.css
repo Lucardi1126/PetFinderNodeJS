@@ -7,6 +7,7 @@ html {
 body {
     font-family: 'Lato', sans-serif;
     min-height: 100vh;
+        background-image: linear-gradient(rgba(0, 60, 255, 0.747), rgba(252, 252, 252, 0.651));
 }
 /** Login **/
 .login,
@@ -95,7 +96,7 @@ body {
 
 .boton:hover {
     cursor: pointer;
-    background-color: rgb(219, 184, 29)!important;
+    background-color: rgba(76, 110, 206, 0.459)!important;
 }
 .boton.eliminar {
     margin-top: 1rem;
@@ -146,7 +147,7 @@ body.index {
     text-decoration: none;
 }
 .panel h2 {
-    color: #FDD835;
+    color: #3549fd;
     font-weight: 900;
     text-align: center;
     font-size: 2rem;
@@ -169,7 +170,7 @@ body.index {
     margin-bottom: 1rem;
 }
 .lista-proyectos ul li a:hover {
-    color: #FDD835;
+    color: #357bfd;
 }
 /** Contenido Principal */
 .contenedor {
@@ -284,10 +285,11 @@ body.index {
 }
 
 form.buscar-mascota {
-    max-width: 800px;
+    max-width: 400px;
     width: 90%;
+    border-radius: 1rem;
     background-color: #607D8B;
-    margin: 0 auto;
+    margin-left: 300px;
     padding: 2rem;
     color: white;
     transition: background-color .5s ease-in-out;
@@ -316,7 +318,8 @@ form input[type="submit"]{
     padding: 1.5rem;
     color: black;
     width: auto;
-    margin: 0;
+    align-items: center;
+    margin-left: 100px;
 }
 
 .contenedor-acciones {
